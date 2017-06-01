@@ -50,9 +50,9 @@ describe Api::V1::ContactsController do
     end
 
 
-    it "responds with http status 204" do
+    it "responds with http status 302" do
       delete :destroy, { id: contact_1.id }
-      expect(response.status).to eq 204
+      expect(response.status).to eq 302
     end
   end
 

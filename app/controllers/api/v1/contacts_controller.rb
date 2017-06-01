@@ -14,7 +14,7 @@ class Api::V1::ContactsController < Api::V1::BaseController
   def destroy
     ids = params[:id].split(',')
     Contact.delete_all(id: ids)
-    respond_with nil
+    redirect_to root_url
   end
 
   private
