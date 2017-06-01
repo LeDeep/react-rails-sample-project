@@ -1,4 +1,8 @@
 var ContactTable = React.createClass({
+  handleDelete(id) {
+    this.props.handleDelete(id);
+  },
+
   render() {
     var tableStyle = {
       width: '100%',
@@ -12,6 +16,7 @@ var ContactTable = React.createClass({
           <td>{contact.email_address}</td>
           <td>{contact.phone_number}</td>
           <td>{contact.company_name}</td>
+          <td><button onClick={this.handleDelete.bind(this, contact.id)} >Delete</button></td>
         </tr>
       )
     });
