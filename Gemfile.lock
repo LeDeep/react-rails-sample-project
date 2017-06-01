@@ -95,6 +95,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     parser (2.3.1.4)
       ast (~> 2.2)
+    pg (0.20.0)
     powerpack (0.1.1)
     public_suffix (2.0.5)
     rack (1.6.4)
@@ -119,6 +120,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.7.1)
       actionpack (= 4.2.7.1)
       activesupport (= 4.2.7.1)
@@ -208,7 +214,9 @@ DEPENDENCIES
   factory_girl_rails
   jbuilder (~> 2.0)
   jquery-rails
+  pg
   rails (~> 4.2)
+  rails_12factor
   react-rails
   responders
   rspec-rails (~> 3.5)
