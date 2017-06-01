@@ -4,6 +4,7 @@ var TableHeaderColumn = ReactBSTable.TableHeaderColumn;
 
 var ContactTable = React.createClass({
   handleDelete(id) {
+    alert('Contact(s) succesfully deleted.')
     this.props.handleDelete(id);
   },
 
