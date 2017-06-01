@@ -40,13 +40,19 @@ describe Api::V1::ContactsController do
 
   describe "#destroy" do
     it "has one less contact after deleting a contact" do
-      delete :destroy, { id: 1 }
+      delete :destroy, { id: contact_1.id }
       expect(Contact.count).to eq 1
     end
 
-    it "responds with http status 302" do
-      delete :destroy, { id: 1 }
-      expect(response.status).to eq 302
+    it "deletes multiple contacts" do
+      delete :destroy, { id: [contact_1.id, contact_2.id] }
+      expect(Contact.count).to eq 0
+    end
+
+
+    it "responds with http status 204" do
+      delete :destroy, { id: contact_1.id }
+      expect(response.status).to eq 204
     end
   end
 
