@@ -11,6 +11,7 @@ var FileUpload = React.createClass({
       .post('/api/v1/contacts/import')
       .send(file);
       req.end(function(err,response){
+        window.location.reload();
       });
     },
 
