@@ -1,12 +1,14 @@
 class Api::V1::ContactsController < Api::V1::BaseController
+  skip_before_filter :verify_authenticity_token
+
   def index
     respond_with Contact.all
   end
 
   def import
     csv_import_service = CsvImportService.new
-    collection = csv_import_service.import(params[:file])
-    respond_with collection, location: nil
+    csv_import_service.import(params[:name].original_filename)
+    redirect_to root_url
   end
 
   def destroy

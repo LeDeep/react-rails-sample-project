@@ -20,7 +20,7 @@ var FileUpload = React.createClass({
       }
       const dropAreaStyle = {
         width: '200px',
-        height: '200px',
+        height: '150px',
         borderWidth: '5px',
         borderColor: '#f0ad4e',
         borderStyle: 'dashed',
