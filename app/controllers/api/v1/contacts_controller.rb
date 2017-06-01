@@ -10,7 +10,9 @@ class Api::V1::ContactsController < Api::V1::BaseController
   end
 
   def destroy
-    respond_with Contact.destroy(params[:id])
+    contact = Contact.find(params[:id])
+    contact.destroy
+    redirect_to root_url
   end
 
   private
