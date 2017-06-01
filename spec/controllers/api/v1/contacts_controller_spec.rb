@@ -49,11 +49,9 @@ describe Api::V1::ContactsController do
       expect(Contact.count).to eq 0
     end
 
-
     it "responds with http status 302" do
       delete :destroy, { id: contact_1.id }
       expect(response.status).to eq 302
     end
   end
-
 end

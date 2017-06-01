@@ -6,10 +6,7 @@ var FileUpload = React.createClass({
       var file = new FormData();
       file.append('name',files[0])
       alert('Your file is uploading, and will be done soon.')
-
-
       var req = request
-
       .post('/api/v1/contacts/import')
       .send(file);
       req.end(function(err,response){
