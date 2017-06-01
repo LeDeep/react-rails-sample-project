@@ -5,6 +5,8 @@ var FileUpload = React.createClass({
   onDrop(files){
       var file = new FormData();
       file.append('name',files[0])
+      alert('Your file is uploading, and will be done soon.')
+
 
       var req = request
 
