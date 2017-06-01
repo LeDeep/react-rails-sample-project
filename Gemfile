@@ -52,3 +52,5 @@ group :development do
 end
 
 gem 'responders'
+gem 'react-rails'
+gem 'browserify-rails'

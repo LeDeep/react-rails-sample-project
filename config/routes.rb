@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "contact#index"
+  root to: "main#index"
 
   namespace :api do
     namespace :v1 do
