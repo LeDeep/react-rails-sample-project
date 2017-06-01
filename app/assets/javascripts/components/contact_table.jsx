@@ -16,15 +16,10 @@ var ContactTable = React.createClass({
   },
 
   render() {
-    function onAfterDeleteRow() {
-      alert('Contact has been succesfully deleted');
-    }
-
     const options = {
-      afterDeleteRow: onAfterDeleteRow  // A hook for after droping rows.
+      afterDeleteRow: this.handleDelete.bind(this)
     }
 
-    // If you want to enable deleteRow, you must enable row selection also.
     const selectRowProp = {
       mode: 'checkbox'
     }
